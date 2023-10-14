@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainFragment.ProfileMainFragment">
+
+    <RelativeLayout
+        android:id="@+id/topBar_Layout"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:gravity="center|start"
+        android:background="@color/orange"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Profile"
+            android:layout_marginLeft="20dp"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scroll_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/topBar_Layout"
+        android:background="@color/background_primary"
+        android:layout_above="@+id/adView"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/topDetail_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                android:padding="10dp"
+                android:backgroundTint="@color/white"
+                >
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+                    android:background="@color/white"
+                    >
+                    <TextView
+                        android:id="@+id/guardiran_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="guardiran"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        />
+                    <TextView
+                        android:id="@+id/email_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="techno@gmail.com"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        android:layout_below="@+id/guardiran_text"
+                        />
+                    <TextView
+                        android:id="@+id/phone_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+156258782"
+                        android:textSize="14sp"
+                        android:textColor="@color/gray"
+                        android:layout_below="@+id/email_text"
+                        />
+                    <ImageView
+                        android:id="@+id/edit_image"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/edit"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/aboutMT_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                android:padding="10dp"
+                android:background="@drawable/card_ripple_effect"
+                android:layout_marginTop="3dp"
+                >
+                <RelativeLayout
+                    android:id="@+id/aboutMT_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:background="@drawable/card_ripple_effect"
+                    android:gravity="center|start"
+                    android:layout_gravity="start|center"
+                    >
+                    <ImageView
+                        android:id="@+id/aboutMT_image"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/about"
+                        app:tint="@color/gray"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="About New Trend"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:layout_toRightOf="@+id/aboutMT_image"
+                        />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/share_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                android:padding="10dp"
+                android:background="@drawable/card_ripple_effect"
+                android:layout_marginTop="3dp"
+                >
+                <RelativeLayout
+                    android:id="@+id/share_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:gravity="center|start"
+                    android:background="@drawable/card_ripple_effect"
+                    android:layout_gravity="start|center"
+                    >
+                    <ImageView
+                        android:id="@+id/share_image"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/share"
+                        app:tint="@color/gray"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Share App"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="14sp"
+                        android:layout_toRightOf="@+id/share_image"
+                        android:textColor="@color/black"
+                        />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/rating_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                android:padding="10dp"
+                android:background="@drawable/card_ripple_effect"
+                android:layout_marginTop="3dp"
+                >
+                <RelativeLayout
+                    android:id="@+id/rating_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:gravity="center|start"
+                    android:background="@drawable/card_ripple_effect"
+                    android:layout_gravity="start|center"
+                    >
+                    <ImageView
+                        android:id="@+id/rating_image"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/star"
+                        app:tint="@color/gray"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My Rating"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="14sp"
+                        android:layout_toRightOf="@+id/rating_image"
+                        android:textColor="@color/black"
+                        />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/paymentOption_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                android:padding="10dp"
+                android:background="@drawable/card_ripple_effect"
+                android:layout_marginTop="3dp"
+                >
+                <RelativeLayout
+                    android:id="@+id/paymentOption_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="15dp"
+                    android:background="@drawable/card_ripple_effect"
+                    android:paddingBottom="15dp"
+                    android:gravity="center|start"
+                    android:layout_gravity="start|center"
+                    >
+                    <ImageView
+                        android:id="@+id/paymentOption_image"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_payment"
+                        app:tint="@color/gray"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Payment Option"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="14sp"
+                        android:layout_toRightOf="@+id/paymentOption_image"
+                        android:textColor="@color/black"
+                        />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/counter_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="5dp"
+                android:padding="10dp"
+                android:background="@drawable/card_ripple_effect"
+                android:layout_marginTop="3dp"
+                >
+                <RelativeLayout
+                    android:id="@+id/counter_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingTop="15dp"
+                    android:background="@drawable/card_ripple_effect"
+                    android:paddingBottom="15dp"
+                    android:gravity="center|start"
+                    android:layout_gravity="start|center"
+                    >
+                    <ImageView
+                        android:id="@+id/counter_image"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_search"
+                        app:tint="@color/gray"
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tasbeeh Counter"
+                        android:layout_marginLeft="10dp"
+                        android:textSize="14sp"
+                        android:layout_toRightOf="@+id/counter_image"
+                        android:textColor="@color/black"
+                        />
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <TextView
+                android:id="@+id/text_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Logout"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                android:textSize="18sp"
+                android:visibility="gone"
+                android:textColor="@color/red"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="70.38 R205"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/gray"
+
+                />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="ca-app-pub-9245753259751303/2168313784">
+    </com.google.android.gms.ads.AdView>
+
+</RelativeLayout>

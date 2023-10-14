@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/refreshLayout"
+    android:background="@color/background_primary"
+    tools:context=".MainFragment.StoreFragment">
+
+    <ScrollView
+        android:id="@+id/home_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_primary"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background_primary"
+            >
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/search_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:backgroundTint="@color/white"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="3"
+                    android:layout_marginBottom="20dp"
+                    android:background="@color/white"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="3"
+                        >
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:padding="10dp"
+                            android:text="Beston Shopping"
+                            android:textSize="22sp"
+                            android:textColor="@color/orange"
+                            android:textStyle="bold"
+                            android:layout_weight="3"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp"
+                            />
+
+                        <LinearLayout
+                            android:id="@+id/cart_layout"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:padding="10dp"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="My Cart"
+                                android:textColor="@color/black"
+                                android:textSize="14sp"
+                                />
+
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@drawable/ic_cart"
+                                android:layout_marginLeft="8dp"
+                                app:tint="@color/black" />
+
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+
+                    <!--                  <ImageView-->
+                    <!--                      android:id="@+id/search_tags"-->
+                    <!--                      android:layout_width="30dp"-->
+                    <!--                      android:layout_height="30dp"-->
+                    <!--                     android:src="@drawable/search"-->
+                    <!--                      android:layout_gravity="center"-->
+                    <!--                      android:layout_marginTop="8dp"-->
+                    <!--                      android:layout_marginRight="20dp"-->
+                    <!--                      />-->
+
+                    <TextView
+                        android:id="@+id/search_tags"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:padding="10dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:inputType="number"
+                        android:textColorHint="@color/gray"
+                        android:textColor="@color/orange"
+                        android:background="@drawable/border_layout"
+                        android:hint="search..."
+                        android:drawableRight="@drawable/ic_search"
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/mainSlider_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/white"
+                android:layout_below="@+id/search_card"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white"
+                    >
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rcvBanner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        >
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/middle_banner_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/main_banner"
+                android:background="@color/sky_orange"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/mainSlider_card"
+                android:paddingBottom="9dp"
+                />
+
+
+            <include
+                android:id="@+id/Smart_Watch_incLayout"
+                layout="@layout/smart_watch_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/middle_banner_image"
+                android:layout_marginTop="-38dp" />
+
+            <include
+                android:id="@+id/Smart_Watch_incLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/smart_watch_second_layout"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/Smart_Watch_incLayout"
+                />
+
+            <ImageView
+                android:id="@+id/middle_banner_image_2"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/main_banner_two"
+                android:background="#89459A"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/Smart_Watch_incLayout2"
+                />
+
+            <include
+                android:id="@+id/men_trouser_incLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/men_trouser_layout"
+                android:layout_below="@+id/middle_banner_image_2"
+                />
+
+            <include
+                android:id="@+id/handfree_incLayout2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/handfree_layout"
+                android:layout_below="@+id/men_trouser_incLayout2"
+                />
+
+            <include
+                android:id="@+id/Gadgets_incLayout32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/gadgets_layout"
+                android:layout_below="@+id/handfree_incLayout2"
+                />
+
+            <include
+                android:id="@+id/Women_fashion_incLayout32"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/woman_fasion_layout"
+                android:layout_below="@+id/Gadgets_incLayout32"
+                />
+
+            <include
+                android:id="@+id/wodenClock_incLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/wooden_clock_layout"
+                android:layout_below="@+id/Women_fashion_incLayout32"
+                />
+
+            <include
+                android:id="@+id/rings_incLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/rings_layout"
+                android:layout_below="@+id/wodenClock_incLayout"
+                />
+
+            <include
+                android:id="@+id/cable_incLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/cables_layout"
+                android:layout_below="@+id/rings_incLayout"
+                />
+
+            <include
+                android:id="@+id/mobile_incLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                layout="@layout/mobile_layout"
+                android:layout_below="@+id/cable_incLayout"
+                />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

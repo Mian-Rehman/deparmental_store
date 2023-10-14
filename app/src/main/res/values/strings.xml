@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Beston</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="feedback_1">We are always working on improving the experience of our users. The feedback will ne forwarded to the right team and strict option will be taken to avoid.</string>
+
+    <string name="about_description">New Trend App  was launched in may 2022. It is the largest home shopping platform in Pakistan. The platform helps customers book reliable home Shoppping like beauty parlor  products and etc. The company vision is to empower millions of shopping professionals across the Country to deliver services at home.</string>
+
+    //Headings
+    <string name="heading_one">Quick &amp; Easy Payments</string>
+    <string name="heading_two">Instant Notifications</string>
+    <string name="heading_three">Cashless Payment</string>
+    <string name="heading_fourth">Pay Anywhere</string>
+
+    //Description
+    <string name="desc_one">Grow your Business By Accepting Card Payments with The New Card Reader</string>
+    <string name="desc_two">After you pay the professionals the instant notification you received</string>
+    <string name="desc_three">If you have no more payment into card so you can pay via cash</string>
+    <string name="desc_fourth">Pay the professionals anywhere at the any place</string>
+
+
+</resources>

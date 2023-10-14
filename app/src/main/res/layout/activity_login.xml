@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Start.LoginActivity">
+
+    <ImageView
+        android:layout_width="160dp"
+        android:layout_height="120dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginRight="-19dp"
+        android:layout_marginBottom="3dp"
+        android:src="@drawable/makeup" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="-19dp"
+        android:layout_marginBottom="0dp"
+        android:src="@drawable/grovery_image" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="-32dp"
+        android:src="@drawable/grocery_image_two" />
+
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/shopping"
+        android:layout_marginLeft="-30dp"
+        android:layout_marginTop="-20dp"
+
+        />
+
+    <ImageView
+        android:id="@+id/logo_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/login_image"
+        android:layout_below="@+id/img"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="70dp"
+        />
+
+    <TextView
+        android:id="@+id/text_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shopping"
+        android:textSize="14sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/logo_image"
+        android:layout_below="@+id/img"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="is now"
+        android:textSize="14sp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="30dp"
+        android:layout_toRightOf="@+id/text_1"
+        android:layout_below="@+id/img"
+        />
+
+    <TextView
+        android:id="@+id/text_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/logo_image"
+        android:layout_below="@+id/text_1"
+        />
+
+    <TextView
+        android:id="@+id/textw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trend"
+        android:textSize="24sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/logo_image"
+        android:layout_below="@+id/text_2"
+        />
+
+    <TextView
+        android:id="@+id/text_3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your Shopping Expert"
+        android:textSize="18sp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/black"
+        android:layout_marginLeft="50dp"
+        android:layout_below="@+id/logo_image"
+        />
+
+    <TextView
+        android:id="@+id/text_4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quick . Affordable . Trusted"
+        android:textSize="14sp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="50dp"
+        android:layout_below="@+id/text_3"
+        />
+
+    <RelativeLayout
+        android:id="@+id/centerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_4"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:gravity="center"
+        >
+
+        <com.hbb20.CountryCodePicker
+            android:id="@+id/ccp"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            app:ccp_arrowColor="@color/black"
+            app:ccpDialog_textColor="@color/black"
+            app:ccp_flagBorderColor="@color/black"
+            app:ccp_showFlag="true"
+            app:ccp_textSize="14sp"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            app:ccp_contentColor="@color/black"
+            android:paddingStart="2dp"
+            app:ccp_customMasterCountries="GB,PK,Af"
+            app:ccp_defaultPhoneCode="92"
+            android:focusedByDefault="true"
+            app:ccpDialog_searchEditTextTint="@color/black"
+            android:layout_marginTop="10dp"
+            />
+
+        <EditText
+            android:id="@+id/ed_number"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_toRightOf="@+id/ccp"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:inputType="number"
+            android:textColorHint="@color/gray"
+            android:textColor="@color/orange"
+            android:background="@drawable/border_layout"
+            android:hint="Enter mobile number"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_below="@+id/centerLayout"
+        android:layout_marginTop="20dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        >
+        <Button
+            android:id="@+id/loginSignUp_button"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Login / Sign Up"
+            android:textAllCaps="false"
+            android:background="@drawable/button_background"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            />
+
+        <Button
+            android:id="@+id/btn_google"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:text="Sign Up With Google"
+            android:textAllCaps="false"
+            android:background="@drawable/button_background"
+            android:textColor="@color/white"
+            app:cornerRadius="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1"
+            android:padding="10dp"
+            />
+    </LinearLayout>
+
+
+
+    <Button
+        android:id="@+id/skip_button"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:text="Skip"
+        android:textAllCaps="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginRight="10dp"
+        android:padding="10dp"
+        android:background="@drawable/button_background"
+        android:textColor="@color/white"
+        app:cornerRadius="20dp"
+        />
+
+
+</RelativeLayout>
